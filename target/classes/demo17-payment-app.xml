@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="demo17-payment-appFlow" doc:id="5fe4fa35-609f-4a5f-9566-af68c4315805" >
+		<http:listener doc:name="Listener" doc:id="2968c061-60a6-4de4-9eaf-e3aaff4e8541" config-ref="HTTP_Listener_config" path="/payment"/>
+		<set-payload value="Payment App Payload" doc:name="Set Payload" doc:id="1a7b93f9-f010-41f7-8125-a18226ac3025" />
+	</flow>
+</mule>
